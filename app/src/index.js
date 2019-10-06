@@ -8,20 +8,17 @@
 
 import React from 'react'
 import {View, Text, StatusBar} from 'react-native'
+import {Provider} from 'react-redux'
+import store from './store'
+
+import Routes from './routes'
 
 const App = () => {
   return (
-    <>
+    <Provider store={store}>
       <StatusBar barStyle="dark-content" />
-      <View
-        style={{
-          justifyContent: 'center',
-          alignItems: 'center',
-          flex: 1,
-        }}>
-        <Text>Start here</Text>
-      </View>
-    </>
+      <Routes />
+    </Provider>
   )
 }
 
