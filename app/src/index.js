@@ -10,6 +10,7 @@ import React from 'react'
 import {View, Text, StatusBar} from 'react-native'
 import {Provider} from 'react-redux'
 import store from './store'
+import {setNavigator} from '@services/navigation'
 
 import Routes from './routes'
 
@@ -17,7 +18,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <StatusBar barStyle="dark-content" />
-      <Routes />
+      <Routes ref={setNavigator} />
     </Provider>
   )
 }
