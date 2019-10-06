@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import {ActivityIndicator} from 'react-native'
 
 import {Container, Input, Button, ButtonText, Error} from './styles'
-import Api from '@services/api'
 
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
